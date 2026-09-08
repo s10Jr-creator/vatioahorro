@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Cuánto consume una lavadora y cuánto cuesta | VatioAhorro</title>
+
+<meta name="description" content="Descubre cuánto consume una lavadora, cómo calcular su coste y qué factores influyen en el consumo eléctrico de cada lavado.">
+
+<link rel="canonical" href="https://s10jr-creator.github.io/vatioahorro/lavadora.html">
+
+<meta name="robots" content="index,follow">
+
+<style>
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+background:#07101d;
+color:#f5f7fb;
+line-height:1.7
+}
+
+a{color:#71e5a3}
+
+.wrap{
+width:min(900px,92%);
+margin:auto
+}
+
+header{
+border-bottom:1px solid #203047;
+background:#07101d;
+padding:20px 0
+}
+
+.logo{
+font-size:25px;
+font-weight:800;
+text-decoration:none;
+color:#fff
+}
+
+.logo span{color:#55df91}
+
+main{padding:55px 0}
+
+.eyebrow{
+color:#71e5a3;
+font-weight:800;
+letter-spacing:2px;
+font-size:14px
+}
+
+h1{
+font-size:clamp(38px,7vw,64px);
+line-height:1.05;
+margin:15px 0 25px
+}
+
+h2{
+font-size:32px;
+line-height:1.2;
+margin-top:50px
+}
+
+h3{font-size:22px}
+
+.lead{
+font-size:20px;
+color:#b8c5d7
+}
+
+.card{
+background:#0d1929;
+border:1px solid #223650;
+border-radius:20px;
+padding:25px;
+margin:25px 0
+}
+
+.muted{color:#aebbd0}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px
+}
+
+input{
+width:100%;
+padding:14px;
+margin-top:7px;
+border-radius:10px;
+border:1px solid #314560;
+background:#07101d;
+color:white;
+font-size:17px
+}
+
+label{
+font-weight:700
+}
+
+.result{
+margin-top:20px;
+padding:20px;
+border-radius:15px;
+background:#07101d;
+border:1px solid #263a55
+}
+
+.result strong{
+font-size:30px;
+color:#71e5a3
+}
+
+.tip{
+border-left:4px solid #55df91;
+padding-left:18px;
+margin:25px 0
+}
+
+ul{padding-left:22px}
+
+footer{
+border-top:1px solid #203047;
+padding:30px 0;
+color:#8998ad
+}
+
+.btn{
+display:inline-block;
+padding:12px 18px;
+border-radius:10px;
+background:#55df91;
+color:#06120b;
+font-weight:800;
+text-decoration:none;
+margin-top:10px
+}
+
+@media(max-width:700px){
+.grid{grid-template-columns:1fr}
+h2{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="wrap">
+<a class="logo" href="index.html">Vatio<span>Ahorro</span></a>
+</div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="eyebrow">GUÍA VATIOAHORRO</div>
+
+<h1>¿Cuánto consume una lavadora y cuánto cuesta ponerla?</h1>
+
+<p class="lead">
+La lavadora es uno de los electrodomésticos que utilizamos con frecuencia
+en casa. Sin embargo, su consumo no es siempre el mismo: depende del
+programa elegido, la temperatura, la carga y el propio modelo.
+</p>
+
+<div class="card">
+<h3>En pocas palabras</h3>
+<p class="muted">
+Para conocer cuánto te cuesta utilizar tu lavadora necesitas saber
+aproximadamente cuánta energía consume cada ciclo y el precio que pagas
+por cada kWh. La forma más fiable de conocer el consumo de un modelo
+concreto es consultar sus especificaciones o su etiqueta energética.
+</p>
+</div>
+
+<h2>¿Cuánta electricidad consume una lavadora?</h2>
+
+<p>
+No existe una cifra única para todas las lavadoras. Un ciclo puede consumir
+más o menos energía dependiendo principalmente de la temperatura del agua,
+la duración del programa, la cantidad de ropa y la eficiencia del aparato.
+</p>
+
+<p>
+El calentamiento del agua suele ser uno de los factores que más influye en
+el consumo eléctrico de un lavado. Por eso, dos programas diferentes pueden
+tener consumos bastante distintos aunque se utilicen en la misma lavadora.
+</p>
+
+<h2>¿Cómo calcular cuánto cuesta un lavado?</h2>
+
+<p>
+La fórmula básica para realizar una estimación es:
+</p>
+
+<div class="card">
+<p>
+<strong>Coste = energía consumida en kWh × precio de la electricidad</strong>
+</p>
+</div>
+
+<p>
+Por ejemplo, si un ciclo consume aproximadamente <strong>0,8 kWh</strong>
+y el precio utilizado para la estimación es de <strong>0,15 €/kWh</strong>:
+</p>
+
+<div class="card">
+<p>
+0,8 kWh × 0,15 €/kWh = <strong>0,12 €</strong>
+</p>
+</div>
+
+<p class="muted">
+Este ejemplo es únicamente orientativo. El precio real de tu electricidad
+puede ser diferente y el consumo de tu lavadora también.
+</p>
+
+<h2>Calculadora: ¿cuánto cuesta utilizar mi lavadora?</h2>
+
+<div class="card">
+
+<div class="grid">
+
+<div>
+<label for="kwh">Consumo del programa (kWh)</label>
+<input id="kwh" type="number" min="0" step="0.01" value="0.8">
+</div>
+
+<div>
+<label for="price">Precio de la electricidad (€/kWh)</label>
+<input id="price" type="number" min="0" step="0.001" value="0.15">
+</div>
+
+<div>
+<label for="cycles">Lavados por semana</label>
+<input id="cycles" type="number" min="0" step="1" value="4">
+</div>
+
+</div>
+
+<div class="result">
+<p>Coste aproximado por lavado:</p>
+<strong id="perWash">0,12 €</strong>
+
+<p>Coste aproximado al mes:</p>
+<strong id="monthly">2,08 €</strong>
+
+<p>Coste aproximado al año:</p>
+<strong id="yearly">24,96 €</strong>
+</div>
+
+</div>
+
+<h2>¿Qué hace que una lavadora consuma más?</h2>
+
+<div class="tip">
+<strong>Temperatura elevada</strong>
+<p class="muted">
+Calentar el agua puede aumentar considerablemente la energía utilizada
+durante el programa.
+</p>
+</div>
+
+<div class="tip">
+<strong>Programas largos</strong>
+<p class="muted">
+La duración por sí sola no determina el consumo, pero algunos programas
+largos pueden utilizar más energía dependiendo de cómo funcione la máquina.
+</p>
+</div>
+
+<div class="tip">
+<strong>Tipo de programa</strong>
+<p class="muted">
+Los programas tienen diferentes temperaturas, movimientos, velocidades y
+duraciones, por lo que su consumo puede variar.
+</p>
+</div>
+
+<div class="tip">
+<strong>Frecuencia de uso</strong>
+<p class="muted">
+Aunque cada lavado tenga un coste relativamente pequeño, utilizar la
+lavadora muchas veces durante todo el año puede aumentar el gasto acumulado.
+</p>
+</div>
+
+<h2>5 consejos para ahorrar al utilizar la lavadora</h2>
+
+<div class="card">
+
+<ol>
+<li>
+<strong>Utiliza temperaturas moderadas cuando sea adecuado.</strong>
+<p class="muted">
+Lavar a temperaturas más bajas puede reducir la energía necesaria para
+calentar el agua.
+</p>
+</li>
+
+<li>
+<strong>Aprovecha la capacidad del tambor.</strong>
+<p class="muted">
+Siempre que sea apropiado para el programa y la ropa, evita realizar muchos
+lavados con cargas pequeñas.
+</p>
+</li>
+
+<li>
+<strong>Utiliza programas eficientes.</strong>
+<p class="muted">
+Los programas diseñados para ahorrar recursos pueden ser una buena opción
+cuando se adaptan al tipo de ropa y al nivel de suciedad.
+</p>
+</li>
+
+<li>
+<strong>Consulta la etiqueta energética.</strong>
+<p class="muted">
+Al comprar una lavadora nueva, compara el consumo energético indicado por
+el fabricante y no solamente el precio de compra.
+</p>
+</li>
+
+<li>
+<strong>Evita poner lavadoras innecesariamente.</strong>
+<p class="muted">
+Organizar los lavados puede ayudarte a reducir el número de ciclos que
+realizas durante la semana.
+</p>
+</li>
+</ol>
+
+</div>
+
+<h2>¿Cómo saber el consumo real de mi lavadora?</h2>
+
+<p>
+La mejor forma de conocer el consumo de un modelo concreto es consultar
+la información proporcionada por el fabricante y su etiqueta energética.
+En algunos casos también puedes utilizar un medidor de consumo compatible
+con el aparato para obtener una medición directa.
+</p>
+
+<p>
+Recuerda que el consumo indicado por el fabricante puede corresponder a
+condiciones de prueba determinadas. En el uso diario, los resultados pueden
+cambiar según el programa y las condiciones de cada lavado.
+</p>
+
+<h2>Preguntas frecuentes</h2>
+
+<div class="card">
+
+<h3>¿Una lavadora consume mucho?</h3>
+<p class="muted">
+Depende del modelo y del programa. El consumo de un lavado puede variar
+bastante, especialmente según la temperatura y la cantidad de agua que
+necesite calentar.
+</p>
+
+<h3>¿Lavar con agua fría ahorra electricidad?</h3>
+<p class="muted">
+Puede reducir la energía necesaria para calentar el agua. Sin embargo,
+siempre debes utilizar el programa adecuado para el tipo de ropa y suciedad.
+</p>
+
+<h3>¿Es mejor hacer un lavado con la lavadora llena?</h3>
+<p class="muted">
+En general, aprovechar la capacidad disponible puede evitar realizar
+ciclos innecesarios, siempre respetando las recomendaciones del fabricante.
+</p>
+
+<h3>¿El precio del kWh es el único coste de mi factura?</h3>
+<p class="muted">
+No. Una factura eléctrica puede incluir otros conceptos, como términos
+fijos, impuestos y otros cargos. Por eso esta calculadora estima únicamente
+el coste asociado a la energía introducida.
+</p>
+
+</div>
+
+<div class="card">
+<h3>¿Quieres calcular otros electrodomésticos?</h3>
+<p class="muted">
+Utiliza la calculadora general de VatioAhorro para estimar el coste de
+otros aparatos de tu casa.
+</p>
+
+<a class="btn" href="index.html#calculadora">
+Ir a la calculadora
+</a>
+</div>
+
+</div>
+</main>
+
+<footer>
+<div class="wrap">
+<strong>VatioAhorro</strong>
+<p>Información y herramientas para entender y reducir el consumo eléctrico.</p>
+<a href="index.html">Volver a VatioAhorro</a>
+</div>
+</footer>
+
+<script>
+const kwh=document.getElementById("kwh");
+const price=document.getElementById("price");
+const cycles=document.getElementById("cycles");
+
+function euro(value){
+return value.toLocaleString("es-ES",{
+style:"currency",
+currency:"EUR",
+minimumFractionDigits:2,
+maximumFractionDigits:2
+});
+}
+
+function calculate(){
+const energy=Math.max(0,Number(kwh.value)||0);
+const cost=Math.max(0,Number(price.value)||0);
+const weekly=Math.max(0,Number(cycles.value)||0);
+
+const perWash=energy*cost;
+const monthly=perWash*weekly*52/12;
+const yearly=perWash*weekly*52;
+
+document.getElementById("perWash").textContent=euro(perWash);
+document.getElementById("monthly").textContent=euro(monthly);
+document.getElementById("yearly").textContent=euro(yearly);
+}
+
+kwh.addEventListener("input",calculate);
+price.addEventListener("input",calculate);
+cycles.addEventListener("input",calculate);
+
+calculate();
+</script>
+
+</body>
+</html>
