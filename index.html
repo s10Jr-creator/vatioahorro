@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VatioAhorro | Calcula tu consumo eléctrico</title>
+<meta name="description" content="Calcula cuánto cuesta usar tus electrodomésticos y aprende formas sencillas de ahorrar electricidad en casa.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#18212b;background:#f7f8fa;line-height:1.6}a{color:inherit}.wrap{width:min(1050px,92%);margin:auto}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:22px;text-decoration:none}.nav a{text-decoration:none;margin-left:18px;font-size:14px}.hero{background:#eaf2ff;padding:72px 0 80px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em}.hero h1{max-width:780px;font-size:clamp(38px,7vw,70px);line-height:1.02;letter-spacing:-.055em;margin:12px 0 20px}.lead{max-width:650px;font-size:18px;color:#52606d}.button{display:inline-block;background:#18212b;color:#fff;padding:12px 19px;border-radius:10px;text-decoration:none;font-weight:700;margin-top:12px}.section{padding:58px 0}.section h2{font-size:30px;letter-spacing:-.035em}.calculator{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;background:#fff;padding:22px;border-radius:16px;box-shadow:0 8px 30px #18212b12}.calculator label{font-size:14px;font-weight:700}.calculator input{width:100%;margin-top:7px;padding:12px;border:1px solid #d5dce3;border-radius:9px;font-size:16px}.result{background:#f0f4f7;border-radius:11px;padding:15px}.result span{display:block;color:#65717d;font-size:13px}.result strong{font-size:24px}.note{font-size:12px;color:#697681}.cards,.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.tip{background:#fff;padding:22px;border-radius:15px;border:1px solid #e3e8ed}.card h3,.tip h3{margin:8px 0}.card p,.tip p{color:#68737e}.article p{max-width:760px}footer{background:#18212b;color:#dbe2e9;padding:38px 0;margin-top:20px}@media(max-width:720px){.calculator,.cards,.tips{grid-template-columns:1fr}.nav nav{display:none}.hero{padding:55px 0 65px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#">VatioAhorro</a><nav><a href="#calculadora">Calculadora</a><a href="#guias">Guías</a><a href="#ahorro">Ahorro</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">AHORRO ENERGÉTICO PARA TU CASA</div><h1>Descubre cuánto te cuesta realmente usar tus electrodomésticos.</h1><p class="lead">Introduce potencia, horas de uso y precio de la electricidad para obtener una estimación diaria, mensual y anual.</p><a class="button" href="#calculadora">Calcular ahora</a></div></section>
+<section id="calculadora" class="wrap section"><h2>Calculadora de consumo eléctrico</h2><div class="calculator">
+<label>Potencia del aparato (W)<input id="w" type="number" value="1000" min="1"></label>
+<label>Horas de uso al día<input id="h" type="number" value="2" min="0" step=".1"></label>
+<label>Precio de la luz (€/kWh)<input id="p" type="number" value=".20" min="0" step=".01"></label>
+<div class="result"><span>Coste diario</span><strong id="d">0,40 €</strong></div>
+<div class="result"><span>Coste mensual</span><strong id="m">12,00 €</strong></div>
+<div class="result"><span>Coste anual</span><strong id="y">146,00 €</strong></div>
+</div><p class="note">Estimación orientativa. El consumo real puede variar según el aparato, el programa, la temperatura y su eficiencia.</p></section>
+<section id="guias" class="wrap section"><h2>Guías rápidas</h2><div class="cards">
+<div class="card"><h3>¿Cuánto consume una lavadora?</h3><p>La temperatura, el programa y la carga influyen en el consumo.</p><a href="#lavadora">Leer guía →</a></div>
+<div class="card"><h3>¿Cuánto consume un aire acondicionado?</h3><p>La potencia no lo dice todo: el tiempo de uso y el aislamiento también importan.</p><a href="#aire">Leer guía →</a></div>
+<div class="card"><h3>¿Qué aparatos gastan más?</h3><p>Compara consumo acumulado en kWh en lugar de fijarte solo en la potencia.</p><a href="#electrodomesticos">Leer guía →</a></div>
+</div></section>
+<section id="ahorro" class="wrap section"><h2>Cómo empezar a ahorrar</h2><div class="tips">
+<div class="tip"><b>01</b><h3>Mide primero</h3><p>Calcula qué aparatos representan un mayor coste según tus hábitos.</p></div>
+<div class="tip"><b>02</b><h3>Reduce lo innecesario</h3><p>Evita horas de funcionamiento y temperaturas más intensivas de lo necesario.</p></div>
+<div class="tip"><b>03</b><h3>Compara antes de comprar</h3><p>El precio inicial no es el único coste: el consumo durante años también cuenta.</p></div>
+</div></section>
+<section id="lavadora" class="wrap section article"><h2>¿Cuánto consume una lavadora?</h2><p>El consumo depende del modelo, programa, temperatura y carga. Para una estimación sencilla puedes usar la potencia eléctrica y el tiempo de funcionamiento.</p><p><strong>Coste ≈ potencia (kW) × horas × precio del kWh.</strong></p><p>Una cifra exacta debe consultarse en la información energética del modelo concreto.</p></section>
+<section id="aire" class="wrap section article"><h2>¿Cuánto consume un aire acondicionado?</h2><p>El consumo real puede variar porque un equipo no necesariamente funciona a su potencia máxima durante todo el tiempo. Influyen el tamaño de la estancia, aislamiento, temperatura exterior y configuración.</p></section>
+<section id="electrodomesticos" class="wrap section article"><h2>¿Qué electrodomésticos consumen más?</h2><p>No existe un ranking universal: un aparato potente utilizado poco tiempo puede gastar menos que otro menos potente utilizado muchas horas.</p><p><strong>kWh = W ÷ 1.000 × horas.</strong> Después puedes multiplicar los kWh por el precio de la electricidad.</p></section>
+</main>
+<footer><div class="wrap"><strong>VatioAhorro</strong><p>Información y herramientas orientativas sobre consumo energético doméstico.</p><small>© 2026 VatioAhorro</small></div></footer>
+<script>
+function euro(n){return n.toLocaleString("es-ES",{style:"currency",currency:"EUR"})}
+function calc(){const w=Number(document.getElementById("w").value)||0,h=Number(document.getElementById("h").value)||0,p=Number(document.getElementById("p").value)||0,d=w/1000*h*p;document.getElementById("d").textContent=euro(d);document.getElementById("m").textContent=euro(d*30);document.getElementById("y").textContent=euro(d*365)}
+["w","h","p"].forEach(id=>document.getElementById(id).addEventListener("input",calc));calc();
+</script>
+</body>
+</html>
