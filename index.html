@@ -2,44 +2,657 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>VatioAhorro | Calcula tu consumo eléctrico</title>
-<meta name="description" content="Calcula cuánto cuesta usar tus electrodomésticos y aprende formas sencillas de ahorrar electricidad en casa.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>VatioAhorro | Calcula tu consumo eléctrico y ahorra</title>
+
+<meta name="description" content="Calcula cuánto cuesta usar tus electrodomésticos y descubre formas sencillas de ahorrar electricidad en casa.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://s10jr-creator.github.io/vatioahorro/">
+<meta name="theme-color" content="#07101d">
+
+<meta property="og:title" content="VatioAhorro | Ahorra electricidad">
+<meta property="og:description" content="Calcula el coste de tus electrodomésticos y descubre consejos para ahorrar energía en casa.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://s10jr-creator.github.io/vatioahorro/">
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#18212b;background:#f7f8fa;line-height:1.6}a{color:inherit}.wrap{width:min(1050px,92%);margin:auto}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:22px;text-decoration:none}.nav a{text-decoration:none;margin-left:18px;font-size:14px}.hero{background:#eaf2ff;padding:72px 0 80px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em}.hero h1{max-width:780px;font-size:clamp(38px,7vw,70px);line-height:1.02;letter-spacing:-.055em;margin:12px 0 20px}.lead{max-width:650px;font-size:18px;color:#52606d}.button{display:inline-block;background:#18212b;color:#fff;padding:12px 19px;border-radius:10px;text-decoration:none;font-weight:700;margin-top:12px}.section{padding:58px 0}.section h2{font-size:30px;letter-spacing:-.035em}.calculator{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;background:#fff;padding:22px;border-radius:16px;box-shadow:0 8px 30px #18212b12}.calculator label{font-size:14px;font-weight:700}.calculator input{width:100%;margin-top:7px;padding:12px;border:1px solid #d5dce3;border-radius:9px;font-size:16px}.result{background:#f0f4f7;border-radius:11px;padding:15px}.result span{display:block;color:#65717d;font-size:13px}.result strong{font-size:24px}.note{font-size:12px;color:#697681}.cards,.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.tip{background:#fff;padding:22px;border-radius:15px;border:1px solid #e3e8ed}.card h3,.tip h3{margin:8px 0}.card p,.tip p{color:#68737e}.article p{max-width:760px}footer{background:#18212b;color:#dbe2e9;padding:38px 0;margin-top:20px}@media(max-width:720px){.calculator,.cards,.tips{grid-template-columns:1fr}.nav nav{display:none}.hero{padding:55px 0 65px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+background:#07101d;
+color:#f5f7fb;
+line-height:1.6
+}
+a{color:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+header{
+position:sticky;
+top:0;
+z-index:10;
+background:rgba(7,16,29,.94);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #203047
+}
+.nav{
+min-height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+.logo{
+font-size:25px;
+font-weight:800;
+text-decoration:none
+}
+.logo span{color:#55df91}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{
+text-decoration:none;
+color:#b7c4d7;
+font-weight:600
+}
+nav a:hover{color:#55df91}
+
+.hero{padding:90px 0 65px}
+.eyebrow{
+color:#71e5a3;
+font-weight:800;
+letter-spacing:2px;
+font-size:14px
+}
+h1{
+font-size:clamp(42px,7vw,76px);
+line-height:1.02;
+max-width:900px;
+margin:18px 0
+}
+.hero p{
+font-size:20px;
+color:#aebbd0;
+max-width:760px
+}
+.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{
+display:inline-block;
+padding:15px 22px;
+border-radius:13px;
+font-weight:800;
+text-decoration:none;
+border:1px solid #29405e
+}
+.btn.primary{
+background:#55df91;
+color:#06120b;
+border-color:#55df91
+}
+.btn.secondary{
+background:#142238
+}
+
+.card{
+background:#0d1929;
+border:1px solid #223650;
+border-radius:22px;
+padding:28px;
+margin:22px 0;
+box-shadow:0 15px 40px rgba(0,0,0,.15)
+}
+section{padding:55px 0}
+h2{font-size:36px;line-height:1.15;margin-top:0}
+h3{font-size:23px}
+.muted{color:#aebbd0}
+
+.calculator{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px
+}
+label{
+display:block;
+font-weight:700;
+margin-bottom:7px
+}
+input{
+width:100%;
+padding:14px;
+border-radius:11px;
+border:1px solid #314560;
+background:#07101d;
+color:white;
+font-size:17px
+}
+input:focus{
+outline:2px solid #55df91;
+border-color:#55df91
+}
+.full{grid-column:1/-1}
+.result{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:22px
+}
+.result-box{
+background:#07101d;
+border:1px solid #263a55;
+padding:18px;
+border-radius:15px
+}
+.result-box strong{
+display:block;
+font-size:25px;
+color:#71e5a3
+}
+.result-box span{
+color:#aebbd0;
+font-size:14px
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+.appliance{
+padding:22px;
+background:#0d1929;
+border:1px solid #223650;
+border-radius:18px
+}
+.appliance .icon{font-size:34px}
+.appliance p{color:#aebbd0}
+.preset{
+background:#16273e;
+border:1px solid #304762;
+color:#fff;
+padding:9px 12px;
+border-radius:9px;
+font-weight:700;
+cursor:pointer
+}
+.preset:hover{border-color:#55df91}
+
+.tip{
+border-left:4px solid #55df91;
+padding-left:18px;
+margin:20px 0
+}
+.tip strong{color:#71e5a3}
+
+.faq details{
+border-bottom:1px solid #263a55;
+padding:18px 0
+}
+.faq summary{
+cursor:pointer;
+font-weight:800;
+font-size:18px
+}
+.faq p{color:#aebbd0}
+
+.legal{
+font-size:15px;
+color:#b8c4d6
+}
+.legal h3{color:#fff;font-size:20px}
+
+footer{
+border-top:1px solid #203047;
+padding:35px 0 55px;
+color:#8998ad
+}
+footer a{color:#aebbd0}
+
+@media(max-width:800px){
+nav{display:none}
+.hero{padding-top:60px}
+.calculator{grid-template-columns:1fr}
+.full{grid-column:auto}
+.result{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr}
+h2{font-size:30px}
+}
 </style>
 </head>
+
 <body>
-<header><div class="wrap nav"><a class="logo" href="#">VatioAhorro</a><nav><a href="#calculadora">Calculadora</a><a href="#guias">Guías</a><a href="#ahorro">Ahorro</a></nav></div></header>
+
+<header>
+<div class="wrap nav">
+<a class="logo" href="#inicio">Vatio<span>Ahorro</span></a>
+<nav>
+<a href="#calculadora">Calculadora</a>
+<a href="#electrodomesticos">Electrodomésticos</a>
+<a href="#ahorro">Ahorro</a>
+<a href="#guias">Guías</a>
+<a href="#faq">Preguntas</a>
+</nav>
+</div>
+</header>
+
 <main>
-<section class="hero"><div class="wrap"><div class="eyebrow">AHORRO ENERGÉTICO PARA TU CASA</div><h1>Descubre cuánto te cuesta realmente usar tus electrodomésticos.</h1><p class="lead">Introduce potencia, horas de uso y precio de la electricidad para obtener una estimación diaria, mensual y anual.</p><a class="button" href="#calculadora">Calcular ahora</a></div></section>
-<section id="calculadora" class="wrap section"><h2>Calculadora de consumo eléctrico</h2><div class="calculator">
-<label>Potencia del aparato (W)<input id="w" type="number" value="1000" min="1"></label>
-<label>Horas de uso al día<input id="h" type="number" value="2" min="0" step=".1"></label>
-<label>Precio de la luz (€/kWh)<input id="p" type="number" value=".20" min="0" step=".01"></label>
-<div class="result"><span>Coste diario</span><strong id="d">0,40 €</strong></div>
-<div class="result"><span>Coste mensual</span><strong id="m">12,00 €</strong></div>
-<div class="result"><span>Coste anual</span><strong id="y">146,00 €</strong></div>
-</div><p class="note">Estimación orientativa. El consumo real puede variar según el aparato, el programa, la temperatura y su eficiencia.</p></section>
-<section id="guias" class="wrap section"><h2>Guías rápidas</h2><div class="cards">
-<div class="card"><h3>¿Cuánto consume una lavadora?</h3><p>La temperatura, el programa y la carga influyen en el consumo.</p><a href="#lavadora">Leer guía →</a></div>
-<div class="card"><h3>¿Cuánto consume un aire acondicionado?</h3><p>La potencia no lo dice todo: el tiempo de uso y el aislamiento también importan.</p><a href="#aire">Leer guía →</a></div>
-<div class="card"><h3>¿Qué aparatos gastan más?</h3><p>Compara consumo acumulado en kWh en lugar de fijarte solo en la potencia.</p><a href="#electrodomesticos">Leer guía →</a></div>
-</div></section>
-<section id="ahorro" class="wrap section"><h2>Cómo empezar a ahorrar</h2><div class="tips">
-<div class="tip"><b>01</b><h3>Mide primero</h3><p>Calcula qué aparatos representan un mayor coste según tus hábitos.</p></div>
-<div class="tip"><b>02</b><h3>Reduce lo innecesario</h3><p>Evita horas de funcionamiento y temperaturas más intensivas de lo necesario.</p></div>
-<div class="tip"><b>03</b><h3>Compara antes de comprar</h3><p>El precio inicial no es el único coste: el consumo durante años también cuenta.</p></div>
-</div></section>
-<section id="lavadora" class="wrap section article"><h2>¿Cuánto consume una lavadora?</h2><p>El consumo depende del modelo, programa, temperatura y carga. Para una estimación sencilla puedes usar la potencia eléctrica y el tiempo de funcionamiento.</p><p><strong>Coste ≈ potencia (kW) × horas × precio del kWh.</strong></p><p>Una cifra exacta debe consultarse en la información energética del modelo concreto.</p></section>
-<section id="aire" class="wrap section article"><h2>¿Cuánto consume un aire acondicionado?</h2><p>El consumo real puede variar porque un equipo no necesariamente funciona a su potencia máxima durante todo el tiempo. Influyen el tamaño de la estancia, aislamiento, temperatura exterior y configuración.</p></section>
-<section id="electrodomesticos" class="wrap section article"><h2>¿Qué electrodomésticos consumen más?</h2><p>No existe un ranking universal: un aparato potente utilizado poco tiempo puede gastar menos que otro menos potente utilizado muchas horas.</p><p><strong>kWh = W ÷ 1.000 × horas.</strong> Después puedes multiplicar los kWh por el precio de la electricidad.</p></section>
+
+<section class="hero" id="inicio">
+<div class="wrap">
+<div class="eyebrow">AHORRA CON DATOS</div>
+
+<h1>Descubre cuánto te cuesta realmente usar tus electrodomésticos.</h1>
+
+<p>
+Introduce la potencia, las horas de uso y el precio de la electricidad.
+VatioAhorro estima tu gasto diario, mensual y anual en segundos.
+</p>
+
+<div class="buttons">
+<a class="btn primary" href="#calculadora">Calcular mi consumo</a>
+<a class="btn secondary" href="#ahorro">Ver consejos</a>
+</div>
+
+<div class="card">
+<h3>Ejemplo rápido</h3>
+<p class="muted">
+Un aparato de 1.000 W utilizado 2 horas al día consume aproximadamente
+2 kWh diarios.
+</p>
+<p><strong style="color:#71e5a3">El coste depende del precio €/kWh que pagues.</strong></p>
+</div>
+</div>
+</section>
+
+<section id="calculadora">
+<div class="wrap">
+<h2>Calculadora de consumo eléctrico</h2>
+<p class="muted">
+Introduce los datos de tu aparato. Si no conoces exactamente la potencia,
+puedes utilizar uno de nuestros ejemplos.
+</p>
+
+<div class="card">
+<div class="calculator">
+
+<div>
+<label for="w">Potencia del aparato (W)</label>
+<input id="w" type="number" min="1" value="1000">
+</div>
+
+<div>
+<label for="hours">Horas de uso al día</label>
+<input id="hours" type="number" min="0" max="24" step="0.1" value="2">
+</div>
+
+<div>
+<label for="price">Precio electricidad (€/kWh)</label>
+<input id="price" type="number" min="0" step="0.001" value="0.15">
+</div>
+
+<div>
+<label>Ejemplos rápidos</label>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button class="preset" onclick="preset(100,3)">Bombilla</button>
+<button class="preset" onclick="preset(150,4)">TV</button>
+<button class="preset" onclick="preset(2000,1)">Horno</button>
+<button class="preset" onclick="preset(1200,2)">Lavadora</button>
+<button class="preset" onclick="preset(1000,6)">Ordenador</button>
+</div>
+</div>
+
+<div class="full">
+<div class="result">
+<div class="result-box">
+<strong id="daily">0,30 €</strong>
+<span>Coste aproximado al día</span>
+</div>
+
+<div class="result-box">
+<strong id="monthly">9,00 €</strong>
+<span>Coste aproximado al mes</span>
+</div>
+
+<div class="result-box">
+<strong id="yearly">109,50 €</strong>
+<span>Coste aproximado al año</span>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section id="electrodomesticos">
+<div class="wrap">
+<h2>¿Cuánto consumen los electrodomésticos?</h2>
+<p class="muted">
+La potencia real depende del modelo y del modo de funcionamiento.
+Estas cifras sirven como orientación.
+</p>
+
+<div class="grid">
+
+<article class="appliance">
+<div class="icon">🧺</div>
+<h3>Lavadora</h3>
+<p>Una lavadora puede utilizar alrededor de 500–2.000 W durante sus diferentes fases.</p>
+<button class="preset" onclick="preset(1200,1)">Calcular ejemplo</button>
+</article>
+
+<article class="appliance">
+<div class="icon">❄️</div>
+<h3>Aire acondicionado</h3>
+<p>Su consumo depende mucho de la potencia, temperatura exterior y tecnología inverter.</p>
+<button class="preset" onclick="preset(1500,5)">Calcular ejemplo</button>
+</article>
+
+<article class="appliance">
+<div class="icon">🔥</div>
+<h3>Horno</h3>
+<p>Un horno doméstico puede alcanzar aproximadamente 2.000–3.500 W.</p>
+<button class="preset" onclick="preset(2500,1)">Calcular ejemplo</button>
+</article>
+
+<article class="appliance">
+<div class="icon">📺</div>
+<h3>Televisor</h3>
+<p>Un televisor moderno suele consumir bastante menos que muchos electrodomésticos de calor.</p>
+<button class="preset" onclick="preset(150,4)">Calcular ejemplo</button>
+</article>
+
+<article class="appliance">
+<div class="icon">💻</div>
+<h3>Ordenador</h3>
+<p>El consumo depende del equipo y de la carga de trabajo.</p>
+<button class="preset" onclick="preset(300,6)">Calcular ejemplo</button>
+</article>
+
+<article class="appliance">
+<div class="icon">♨️</div>
+<h3>Calefactor</h3>
+<p>Los calefactores eléctricos pueden tener una potencia elevada y aumentar rápidamente el consumo.</p>
+<button class="preset" onclick="preset(2000,3)">Calcular ejemplo</button>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="ahorro">
+<div class="wrap">
+<h2>Formas sencillas de ahorrar electricidad</h2>
+
+<div class="card">
+<div class="tip">
+<strong>1. Reduce las horas de uso.</strong>
+<p class="muted">
+Un aparato puede tener una potencia moderada, pero utilizarlo muchas horas
+puede aumentar considerablemente su consumo anual.
+</p>
+</div>
+
+<div class="tip">
+<strong>2. Evita el modo de espera cuando no sea necesario.</strong>
+<p class="muted">
+Desconectar determinados equipos cuando no los utilizas puede evitar consumos
+innecesarios.
+</p>
+</div>
+
+<div class="tip">
+<strong>3. Utiliza programas eficientes.</strong>
+<p class="muted">
+En lavadoras y lavavajillas, los programas eficientes pueden reducir el consumo
+cuando son adecuados para la carga.
+</p>
+</div>
+
+<div class="tip">
+<strong>4. Controla los aparatos que generan calor.</strong>
+<p class="muted">
+Hornos, calefactores y otros equipos de alta potencia pueden tener un impacto
+importante en la factura.
+</p>
+</div>
+
+<div class="tip">
+<strong>5. Compara antes de comprar.</strong>
+<p class="muted">
+La etiqueta energética y las especificaciones del fabricante ayudan a comparar
+el consumo de diferentes modelos.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="guias">
+<div class="wrap">
+<h2>Guías rápidas</h2>
+
+<div class="grid">
+
+<article class="card">
+<h3>¿Qué significa kWh?</h3>
+<p class="muted">
+El kWh es una unidad utilizada para medir energía. Por ejemplo, un aparato
+de 1.000 W funcionando durante una hora consume aproximadamente 1 kWh.
+</p>
+</article>
+
+<article class="card">
+<h3>¿Cómo calcular el coste?</h3>
+<p class="muted">
+Multiplica la potencia en kW por las horas de funcionamiento y por el precio
+de la electricidad. Así obtendrás una estimación del coste.
+</p>
+</article>
+
+<article class="card">
+<h3>¿Por qué cambia el consumo?</h3>
+<p class="muted">
+El consumo real puede variar según el modelo, la temperatura, el programa,
+la eficiencia y la intensidad con la que funciona el aparato.
+</p>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="wrap">
+<h2>Preguntas frecuentes</h2>
+
+<div class="card faq">
+
+<details>
+<summary>¿La calculadora muestra el precio exacto de mi factura?</summary>
+<p>
+No. Es una estimación basada en la potencia, las horas de uso y el precio
+introducido. Una factura real puede incluir impuestos, términos fijos,
+servicios y otras condiciones.
+</p>
+</details>
+
+<details>
+<summary>¿Qué precio €/kWh debo introducir?</summary>
+<p>
+Puedes introducir el precio que aparezca en tu tarifa o utilizar un valor
+aproximado. Si tu tarifa tiene diferentes precios según la hora, el cálculo
+será solamente orientativo.
+</p>
+</details>
+
+<details>
+<summary>¿El consumo de un electrodoméstico siempre es el mismo?</summary>
+<p>
+No necesariamente. Algunos aparatos regulan automáticamente su potencia
+y otros funcionan por ciclos, por lo que su consumo puede variar.
+</p>
+</details>
+
+<details>
+<summary>¿Cómo puedo saber la potencia de mi aparato?</summary>
+<p>
+Normalmente aparece en una etiqueta del aparato, en el manual o en las
+especificaciones proporcionadas por el fabricante.
+</p>
+</details>
+
+</div>
+</div>
+</section>
+
+<section id="aviso">
+<div class="wrap">
+<h2>Aviso legal</h2>
+<div class="card legal">
+<p>
+VatioAhorro es un proyecto informativo destinado a ofrecer herramientas
+orientativas relacionadas con el consumo eléctrico doméstico.
+</p>
+<p>
+Los resultados de la calculadora son estimaciones y no constituyen una
+factura, presupuesto energético ni asesoramiento profesional.
+</p>
+<p>
+Las cifras de consumo indicadas para los electrodomésticos son orientativas.
+El consumo real depende del modelo, configuración, tiempo de funcionamiento
+y condiciones de uso.
+</p>
+</div>
+</div>
+</section>
+
+<section id="privacidad">
+<div class="wrap">
+<h2>Privacidad</h2>
+<div class="card legal">
+<p>
+En esta versión de VatioAhorro, la calculadora funciona directamente en el
+navegador y los datos introducidos en ella se utilizan para realizar los
+cálculos mostrados en pantalla.
+</p>
+<p>
+No solicitamos datos personales para utilizar la calculadora.
+</p>
+<p>
+Si en el futuro se incorporan servicios de terceros, estadísticas o publicidad,
+esta información deberá actualizarse para reflejar las tecnologías utilizadas
+y las obligaciones legales aplicables.
+</p>
+</div>
+</div>
+</section>
+
+<section id="cookies">
+<div class="wrap">
+<h2>Cookies</h2>
+<div class="card legal">
+<p>
+La versión actual de VatioAhorro no utiliza cookies propias para el
+funcionamiento de la calculadora.
+</p>
+<p>
+La incorporación futura de servicios de terceros, como publicidad o analítica,
+podría implicar tecnologías de almacenamiento o cookies. En ese caso esta
+información deberá actualizarse y se aplicarán los mecanismos de consentimiento
+que correspondan.
+</p>
+</div>
+</div>
+</section>
+
+<section id="contacto">
+<div class="wrap">
+<h2>Contacto</h2>
+<div class="card legal">
+<p>
+Si necesitas comunicar una incidencia relacionada con el funcionamiento de
+VatioAhorro o sugerir una mejora, puedes utilizar los canales de contacto
+asociados al proyecto.
+</p>
+<p>
+VatioAhorro se encuentra en desarrollo y algunas funcionalidades pueden
+cambiar con el tiempo.
+</p>
+</div>
+</div>
+</section>
+
 </main>
-<footer><div class="wrap"><strong>VatioAhorro</strong><p>Información y herramientas orientativas sobre consumo energético doméstico.</p><small>© 2026 VatioAhorro</small></div></footer>
+
+<footer>
+<div class="wrap">
+<strong>VatioAhorro</strong>
+<p>Herramientas y consejos para entender y reducir el consumo eléctrico.</p>
+<p>
+<a href="#aviso">Aviso legal</a> ·
+<a href="#privacidad">Privacidad</a> ·
+<a href="#cookies">Cookies</a> ·
+<a href="#contacto">Contacto</a>
+</p>
+<p>© 2026 VatioAhorro</p>
+</div>
+</footer>
+
 <script>
-function euro(n){return n.toLocaleString("es-ES",{style:"currency",currency:"EUR"})}
-function calc(){const w=Number(document.getElementById("w").value)||0,h=Number(document.getElementById("h").value)||0,p=Number(document.getElementById("p").value)||0,d=w/1000*h*p;document.getElementById("d").textContent=euro(d);document.getElementById("m").textContent=euro(d*30);document.getElementById("y").textContent=euro(d*365)}
-["w","h","p"].forEach(id=>document.getElementById(id).addEventListener("input",calc));calc();
+const w=document.getElementById("w");
+const hours=document.getElementById("hours");
+const price=document.getElementById("price");
+
+function euro(value){
+return value.toLocaleString("es-ES",{
+style:"currency",
+currency:"EUR",
+minimumFractionDigits:2,
+maximumFractionDigits:2
+});
+}
+
+function calculate(){
+const watts=Math.max(0,Number(w.value)||0);
+const h=Math.min(24,Math.max(0,Number(hours.value)||0));
+const p=Math.max(0,Number(price.value)||0);
+
+const dailyKwh=(watts/1000)*h;
+const dailyCost=dailyKwh*p;
+const monthlyCost=dailyCost*30;
+const yearlyCost=dailyCost*365;
+
+document.getElementById("daily").textContent=euro(dailyCost);
+document.getElementById("monthly").textContent=euro(monthlyCost);
+document.getElementById("yearly").textContent=euro(yearlyCost);
+}
+
+function preset(watts,h){
+w.value=watts;
+hours.value=h;
+calculate();
+document.getElementById("calculadora").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+w.addEventListener("input",calculate);
+hours.addEventListener("input",calculate);
+price.addEventListener("input",calculate);
+
+calculate();
 </script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebSite",
+"name":"VatioAhorro",
+"url":"https://s10jr-creator.github.io/vatioahorro/",
+"description":"Herramientas y consejos para entender y ahorrar electricidad en casa."
+}
+</script>
+
 </body>
 </html>
