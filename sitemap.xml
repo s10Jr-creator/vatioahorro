@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://s10jr-creator.github.io/vatioahorro/</loc>
   </url>
+
   <url>
     <loc>https://s10jr-creator.github.io/vatioahorro/lavadora.html</loc>
   </url>
+
   <url>
     <loc>https://s10jr-creator.github.io/vatioahorro/aire-acondicionado.html</loc>
   </url>
+
+  <url>
+    <loc>https://s10jr-creator.github.io/vatioahorro/horno.html</loc>
+  </url>
+
+  <url>
+    <loc>https://s10jr-creator.github.io/vatioahorro/ahorrar-electricidad.html</loc>
+  </url>
+
+  <url>
+    <loc>https://s10jr-creator.github.io/vatioahorro/frigorifico.html</loc>
+  </url>
+
+  <url>
+    <loc>https://s10jr-creator.github.io/vatioahorro/calcular-consumo.html</loc>
+  </url>
+
 </urlset>
