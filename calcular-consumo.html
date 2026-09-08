@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Cómo calcular el consumo eléctrico de cualquier aparato | VatioAhorro</title>
+
+<meta name="description" content="Aprende a calcular el consumo eléctrico de cualquier aparato en kWh y cuánto cuesta utilizarlo según su potencia, tiempo de uso y precio de la electricidad.">
+
+<link rel="canonical" href="https://s10jr-creator.github.io/vatioahorro/calcular-consumo.html">
+
+<meta name="robots" content="index,follow">
+
+<style>
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+background:#07101d;
+color:#f5f7fb;
+line-height:1.7
+}
+
+a{color:#71e5a3}
+
+.wrap{
+width:min(900px,92%);
+margin:auto
+}
+
+header{
+border-bottom:1px solid #203047;
+background:#07101d;
+padding:20px 0
+}
+
+.logo{
+font-size:25px;
+font-weight:800;
+text-decoration:none;
+color:#fff
+}
+
+.logo span{color:#55df91}
+
+main{padding:55px 0}
+
+.eyebrow{
+color:#71e5a3;
+font-weight:800;
+letter-spacing:2px;
+font-size:14px
+}
+
+h1{
+font-size:clamp(38px,7vw,64px);
+line-height:1.05;
+margin:15px 0 25px
+}
+
+h2{
+font-size:32px;
+line-height:1.2;
+margin-top:50px
+}
+
+h3{font-size:22px}
+
+.lead{
+font-size:20px;
+color:#b8c5d7
+}
+
+.card{
+background:#0d1929;
+border:1px solid #223650;
+border-radius:20px;
+padding:25px;
+margin:25px 0
+}
+
+.muted{color:#aebbd0}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px
+}
+
+input{
+width:100%;
+padding:14px;
+margin-top:7px;
+border-radius:10px;
+border:1px solid #314560;
+background:#07101d;
+color:white;
+font-size:17px
+}
+
+label{font-weight:700}
+
+.result{
+margin-top:20px;
+padding:20px;
+border-radius:15px;
+background:#07101d;
+border:1px solid #263a55
+}
+
+.result strong{
+font-size:30px;
+color:#71e5a3
+}
+
+.tip{
+border-left:4px solid #55df91;
+padding-left:18px;
+margin:25px 0
+}
+
+ul{padding-left:22px}
+
+footer{
+border-top:1px solid #203047;
+padding:30px 0;
+color:#8998ad
+}
+
+.btn{
+display:inline-block;
+padding:12px 18px;
+border-radius:10px;
+background:#55df91;
+color:#06120b;
+font-weight:800;
+text-decoration:none;
+margin-top:10px
+}
+
+@media(max-width:700px){
+.grid{grid-template-columns:1fr}
+h2{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="wrap">
+<a class="logo" href="index.html">Vatio<span>Ahorro</span></a>
+</div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="eyebrow">GUÍA VATIOAHORRO</div>
+
+<h1>¿Cómo calcular el consumo eléctrico de cualquier aparato?</h1>
+
+<p class="lead">
+Calcular cuánto consume un electrodoméstico puede parecer complicado,
+pero conociendo su potencia y el tiempo que lo utilizas puedes obtener
+una estimación sencilla de su consumo y de su coste.
+</p>
+
+<div class="card">
+<h3>La fórmula básica</h3>
+
+<p class="muted">
+Para calcular la energía utilizada necesitas convertir la potencia del
+aparato de vatios (W) a kilovatios (kW) y multiplicarla por las horas de uso.
+</p>
+
+<p>
+<strong>Consumo (kWh) = potencia (W) ÷ 1.000 × horas de uso</strong>
+</p>
+</div>
+
+<h2>¿Qué significan W, kW y kWh?</h2>
+
+<p>
+Los <strong>vatios (W)</strong> indican la potencia de un aparato, es decir,
+la cantidad de energía que necesita en un momento determinado.
+</p>
+
+<p>
+Los <strong>kilovatios (kW)</strong> son simplemente una unidad mayor de
+potencia. Un kilovatio equivale a 1.000 vatios.
+</p>
+
+<p>
+Los <strong>kilovatios hora (kWh)</strong> sirven para medir la energía
+consumida a lo largo del tiempo. Es una de las unidades que aparecen
+habitualmente en las facturas eléctricas.
+</p>
+
+<h2>Ejemplo sencillo</h2>
+
+<div class="card">
+
+<p>
+Imagina un aparato de <strong>1.000 W</strong> que utilizas durante
+<strong>2 horas</strong>.
+</p>
+
+<p>
+Primero convertimos la potencia:
+</p>
+
+<p>
+1.000 W ÷ 1.000 = <strong>1 kW</strong>
+</p>
+
+<p>
+Después multiplicamos por las horas:
+</p>
+
+<p>
+1 kW × 2 horas = <strong>2 kWh</strong>
+</p>
+
+<p class="muted">
+Por tanto, ese aparato consumiría aproximadamente 2 kWh durante esas
+dos horas de funcionamiento continuo.
+</p>
+
+</div>
+
+<h2>¿Cuánto cuesta ese consumo?</h2>
+
+<p>
+Una vez que conocemos los kWh utilizados, podemos estimar el coste
+multiplicando la energía consumida por el precio de la electricidad.
+</p>
+
+<div class="card">
+
+<p>
+<strong>Coste = consumo (kWh) × precio (€/kWh)</strong>
+</p>
+
+<p>
+Por ejemplo, si consumes 2 kWh y utilizamos un precio de referencia de
+0,15 €/kWh:
+</p>
+
+<p>
+2 × 0,15 = <strong>0,30 €</strong>
+</p>
+
+<p class="muted">
+Es una estimación. El precio real que pagas puede variar según tu tarifa
+y otros conceptos incluidos en la factura.
+</p>
+
+</div>
+
+<h2>Calculadora de consumo eléctrico</h2>
+
+<div class="card">
+
+<div class="grid">
+
+<div>
+<label for="power">Potencia del aparato (W)</label>
+<input id="power" type="number" min="0" step="1" value="1000">
+</div>
+
+<div>
+<label for="hours">Horas de uso al día</label>
+<input id="hours" type="number" min="0" step="0.1" value="2">
+</div>
+
+<div>
+<label for="days">Días de uso al mes</label>
+<input id="days" type="number" min="0" step="1" value="30">
+</div>
+
+<div>
+<label for="price">Precio de la electricidad (€/kWh)</label>
+<input id="price" type="number" min="0" step="0.001" value="0.15">
+</div>
+
+</div>
+
+<div class="result">
+
+<p>Consumo aproximado al día:</p>
+<strong id="daily">2,00 kWh</strong>
+
+<p>Consumo aproximado al mes:</p>
+<strong id="monthly">60,00 kWh</strong>
+
+<p>Coste aproximado al mes:</p>
+<strong id="monthlyCost">9,00 €</strong>
+
+<p>Coste aproximado al año:</p>
+<strong id="yearlyCost">108,00 €</strong>
+
+</div>
+
+</div>
+
+<h2>¿Dónde puedo encontrar la potencia de un aparato?</h2>
+
+<p>
+La potencia suele aparecer en una etiqueta situada en el propio aparato,
+en su manual de instrucciones o en la información proporcionada por el
+fabricante.
+</p>
+
+<p>
+En algunos dispositivos también aparece directamente en vatios, por
+ejemplo 500 W, 1.000 W o 2.000 W.
+</p>
+
+<div class="tip">
+<strong>Importante:</strong>
+<p class="muted">
+La potencia indicada no significa necesariamente que el aparato consuma
+esa cantidad de energía durante todo el tiempo. Algunos electrodomésticos
+regulan su funcionamiento y pueden encender y apagar determinados
+componentes durante el uso.
+</p>
+</div>
+
+<h2>Factores que pueden cambiar el consumo real</h2>
+
+<ul>
+<li>La potencia del aparato.</li>
+<li>El tiempo que permanece funcionando.</li>
+<li>El programa o modo seleccionado.</li>
+<li>La temperatura utilizada.</li>
+<li>La eficiencia energética del dispositivo.</li>
+<li>La frecuencia con la que se utiliza.</li>
+</ul>
+
+<h2>Errores habituales al calcular el consumo</h2>
+
+<div class="tip">
+<strong>Confundir W con kW.</strong>
+<p class="muted">
+Para pasar de W a kW debes dividir entre 1.000.
+</p>
+</div>
+
+<div class="tip">
+<strong>Olvidar las horas de funcionamiento.</strong>
+<p class="muted">
+La potencia por sí sola no indica cuánta energía se consume durante un
+periodo de tiempo.
+</p>
+</div>
+
+<div class="tip">
+<strong>Confundir el coste de la energía con el total de la factura.</strong>
+<p class="muted">
+La factura eléctrica puede incluir otros conceptos además de la energía
+consumida.
+</p>
+</div>
+
+<h2>Preguntas frecuentes</h2>
+
+<div class="card">
+
+<h3>¿Cuántos kWh consume un aparato de 2.000 W?</h3>
+<p class="muted">
+Si funciona durante una hora a plena potencia, el cálculo aproximado sería
+2 kWh. Si funciona durante más o menos tiempo, el resultado cambia.
+</p>
+
+<h3>¿Un aparato de más vatios siempre gasta más?</h3>
+<p class="muted">
+Si dos aparatos funcionan durante el mismo tiempo y uno tiene una potencia
+mayor, en principio necesitará más energía durante ese periodo. Sin embargo,
+el consumo real también depende de cómo funciona cada aparato.
+</p>
+
+<h3>¿Puedo calcular el consumo de cualquier electrodoméstico?</h3>
+<p class="muted">
+Sí, puedes hacer una estimación utilizando su potencia y el tiempo de uso.
+Para obtener un resultado más preciso, puedes medir directamente el consumo
+del aparato.
+</p>
+
+<h3>¿El resultado de la calculadora es exacto?</h3>
+<p class="muted">
+Es una estimación basada en los datos introducidos. El consumo real puede
+ser diferente si el aparato no funciona continuamente a la potencia indicada.
+</p>
+
+</div>
+
+<div class="card">
+<h3>¿Quieres calcular un aparato concreto?</h3>
+
+<p class="muted">
+Puedes utilizar la calculadora principal de VatioAhorro para estimar el
+coste de distintos electrodomésticos.
+</p>
+
+<a class="btn" href="index.html#calculadora">
+Ir a la calculadora
+</a>
+
+</div>
+
+</div>
+</main>
+
+<footer>
+<div class="wrap">
+<strong>VatioAhorro</strong>
+<p>Información y herramientas para entender y reducir el consumo eléctrico.</p>
+<a href="index.html">Volver a VatioAhorro</a>
+</div>
+</footer>
+
+<script>
+
+const power=document.getElementById("power");
+const hours=document.getElementById("hours");
+const days=document.getElementById("days");
+const price=document.getElementById("price");
+
+function number(value){
+return Math.max(0,Number(value)||0);
+}
+
+function kwh(value){
+return value.toLocaleString("es-ES",{
+minimumFractionDigits:2,
+maximumFractionDigits:2
+});
+}
+
+function euro(value){
+return value.toLocaleString("es-ES",{
+style:"currency",
+currency:"EUR",
+minimumFractionDigits:2,
+maximumFractionDigits:2
+});
+}
+
+function calculate(){
+
+const watts=number(power.value);
+const dailyHours=number(hours.value);
+const monthlyDays=number(days.value);
+const electricityPrice=number(price.value);
+
+const dailyConsumption=(watts/1000)*dailyHours;
+const monthlyConsumption=dailyConsumption*monthlyDays;
+const monthlyCost=monthlyConsumption*electricityPrice;
+const yearlyCost=monthlyCost*12;
+
+document.getElementById("daily").textContent=kwh(dailyConsumption)+" kWh";
+document.getElementById("monthly").textContent=kwh(monthlyConsumption)+" kWh";
+document.getElementById("monthlyCost").textContent=euro(monthlyCost);
+document.getElementById("yearlyCost").textContent=euro(yearlyCost);
+
+}
+
+power.addEventListener("input",calculate);
+hours.addEventListener("input",calculate);
+days.addEventListener("input",calculate);
+price.addEventListener("input",calculate);
+
+calculate();
+
+</script>
+
+</body>
+</html>
